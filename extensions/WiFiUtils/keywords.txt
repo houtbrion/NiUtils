@@ -1,0 +1,15 @@
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+CheckNif	KEYWORD2
+NifInitStatus	KEYWORD2
+PrintNetworkStatus	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+WiFiUtils.h	LITERAL1
