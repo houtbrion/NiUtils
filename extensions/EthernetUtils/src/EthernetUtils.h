@@ -15,5 +15,6 @@
 bool CheckNif(void);
 uint8_t NifInitStatus(void);
 void PrintNetworkStatus(void);
+String NetworkStatus(void);
 
 #endif /* _ETHERNET_UTILS_H_ */

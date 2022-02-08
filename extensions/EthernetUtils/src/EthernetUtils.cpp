@@ -29,3 +29,12 @@ void PrintNetworkStatus(void) {
   Serial.print("IP Address: ");
   Serial.println(ip);
 }
+
+String NetworkStatus(void) {
+  IPAddress address = Ethernet.localIP();
+  String result="IPaddress: "+ String(address[0]) + "." + 
+        String(address[1]) + "." + 
+        String(address[2]) + "." + 
+        String(address[3]);
+  return result;
+}

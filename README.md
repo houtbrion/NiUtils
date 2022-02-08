@@ -90,6 +90,9 @@ UDP_CLASS udp
 ## ``void PrintNetworkStatus(void)``
 IPアドレス等の情報をシリアルへの出力する関数です．
 
+## ``String NetworkStatus(void)``
+Ethernetの場合はIPアドレスのみ，WiFiの場合はIPアドレスに加えて，SSID，WiFi信号のRSSIを1行の文字列(String型)にまとめて出力する関数でログ出力に利用するためのもの．
+
 ## 使い方の実例
 DHCPを用いる場合は，WiFiとイーサネット両方に対応するコードが以下のように短くまとめることができます．
 ```

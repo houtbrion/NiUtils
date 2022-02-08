@@ -23,5 +23,6 @@
 uint8_t NifInitStatus(void);
 void PrintNetworkStatus(void);
 bool CheckNif(void);
+String NetworkStatus(void);
 
 #endif /* _WIFI_UTILS_H_ */

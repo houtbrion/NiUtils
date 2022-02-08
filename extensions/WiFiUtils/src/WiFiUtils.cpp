@@ -44,3 +44,8 @@ void PrintNetworkStatus(void) {
   Serial.print(rssi);
   Serial.println(" dBm");
 }
+
+String NetworkStatus(void) {
+  String result="SSID: "+WiFi.SSID()+" , "+"IPaddress: "+WiFi.localIP().toString()+" , "+"RSSI: "+String(WiFi.RSSI());
+  return result;
+}
