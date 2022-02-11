@@ -12,4 +12,5 @@ PrintNetworkStatus	KEYWORD2
 #######################################
 # Constants (LITERAL1)
 #######################################
+USE_WIFI	LITERAL1
 WiFiUtils.h	LITERAL1

@@ -45,7 +45,20 @@ void PrintNetworkStatus(void) {
   Serial.println(" dBm");
 }
 
+#if CPU_TYPE==TYPE_ESP32
 String NetworkStatus(void) {
   String result="SSID: "+WiFi.SSID()+" , "+"IPaddress: "+WiFi.localIP().toString()+" , "+"RSSI: "+String(WiFi.RSSI());
   return result;
 }
+
+#else /* CPU_TYPE==TYPE_ESP32 */
+
+String NetworkStatus(void) {
+  IPAddress address = WiFi.localIP();
+  String ssid=String(WiFi.SSID());
+  String ipaddr=String(address[0]) + "." + String(address[1]) + "." + String(address[2]) + "." + String(address[3]);
+  String result="SSID: "+ssid+" , "+"IPaddress: "+ipaddr+" , "+"RSSI: "+String(WiFi.RSSI());
+  return result;
+}
+#endif /* CPU_TYPE==TYPE_ESP32 */
+

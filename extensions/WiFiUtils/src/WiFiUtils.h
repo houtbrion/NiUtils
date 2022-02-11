@@ -13,6 +13,10 @@
 #include <WiFiNINA.h>
 #endif /* USE_WIFI_NINA */
 
+#ifdef USE_WIFI_WINC1500
+#include <WiFi101.h>
+#endif /* USE_WIFI_WINC1500 */
+
 #ifdef USE_UDP
 #include <Udp.h>
 #endif /* USE_UDP */

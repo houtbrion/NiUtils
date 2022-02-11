@@ -13,6 +13,11 @@
 #define USE_WIFI_NORMAL
 #endif /* EMBEDED_NETWORK==WIFI_NORMAL */
 
+#if EMBEDED_NETWORK==WIFI_WINC1500
+#define USE_WIFI
+#define USE_WIFI_WINC1500
+#endif /* EMBEDED_NETWORK==WIFI_WINC1500 */
+
 #if EMBEDED_NETWORK==ETHERNET_W5XXX
 #define USE_ETHERNET
 #define USE_ETHERNET_W5XXX
@@ -26,7 +31,9 @@
 #endif /* USE_ETHERNET */
 
 #ifdef USE_WIFI
+#ifndef USE_WIFI_WINC1500
 #define UDP_CLASS    WiFiUDP
+#endif /* USE_WIFI_WINC1500 */
 #define SERVER_CLASS WiFiServer
 #define CLIENT_CLASS WiFiClient
 #include <WiFiUtils.h>
